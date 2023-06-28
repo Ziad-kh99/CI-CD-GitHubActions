@@ -18,6 +18,8 @@ jobs:
 
             - name: Restore dependencies 🛠
               run: dotnet restore
+              working-directory: WeatherForeCastAPI
 
             - name: Build App 🚀
               run: dotnet build -c Release --no-restore
+              working-directory: WeatherForeCastAPI
