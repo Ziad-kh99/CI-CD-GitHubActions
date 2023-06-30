@@ -27,3 +27,6 @@ jobs:
             - name: Run automatted tests 🧪
               run: dotnet test
               working-directory: WeatherForeCast.Test
+
+            - name: Publish app
+              run: dotnet publish -c Release -o ./out
