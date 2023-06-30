@@ -30,3 +30,4 @@ jobs:
 
             - name: Publish app
               run: dotnet publish -c Release -o ./out
+              working-directory: WeatherForeCastAPI
