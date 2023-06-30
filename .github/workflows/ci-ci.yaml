@@ -23,3 +23,7 @@ jobs:
             - name: Build App 🚀
               run: dotnet build -c Release --no-restore
               working-directory: WeatherForeCastAPI
+
+            - name: Run automatted tests 🧪
+              run: dotnet test -c Release --no-build
+              working-directory: WeatherForeCast.Test
