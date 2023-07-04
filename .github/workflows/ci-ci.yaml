@@ -22,7 +22,7 @@ jobs:
 
             - name: Start SQL Server 
               run: |
-                docker run -d -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=WeatherForeCast~Pass1" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest 
+                docker run -d -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Pass~w0r8" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest 
 
             - name: Sleep for 5 seconds 😴
               uses: jakejarvis/wait-action@master
@@ -39,7 +39,7 @@ jobs:
 
             - name: Run automatted tests 🧪
               env:
-                ConnectionString: Server=localhost;Database=CustomerDB_Test;User=sa;Password=WeatherForeCast~Pass1
+                ConnectionString: Server=localhost;Database=CustomerDB_Test;User=sa;Password=Pass~w0r8
               run: dotnet test
               working-directory: WeatherForeCast.Test
 
