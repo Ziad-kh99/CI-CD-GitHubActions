@@ -39,7 +39,7 @@ jobs:
 
             - name: Run automatted tests 🧪
               env:
-                ConnectionString: Server=localhost; Database=CustomerDB_Test; User=sa; Password=WeatherForeCast~Pass1
+                ConnectionString: Server=localhost;Database=CustomerDB_Test;User=sa;Password=WeatherForeCast~Pass1
               run: dotnet test
               working-directory: WeatherForeCast.Test
 
