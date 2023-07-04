@@ -5,7 +5,7 @@ on:
         branches: 
             - main
 
-env: 
+env:  
     DOTNET-VERSION: '7.0.x'
     
 jobs: 
@@ -20,6 +20,15 @@ jobs:
               with:
                 dotnet-version: ${{ env.DOTNET-VERSION }}
 
+            - name: Start SQL Server 
+              run: |
+                docker run -d -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=WeatherForeCast~Pass1" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest 
+
+            - name: Sleep for 5 seconds 😴
+              uses: jakejarvis/wait-action@master
+              with:
+               time: '5s'
+
             - name: Restore dependencies 🛠
               run: dotnet restore
               working-directory: WeatherForeCastAPI
@@ -29,6 +38,8 @@ jobs:
               working-directory: WeatherForeCastAPI
 
             - name: Run automatted tests 🧪
+              env:
+                ConnectionString: Server=localhost; Database=CustomerDB_Test; User=sa; Password=WeatherForeCast~Pass1
               run: dotnet test
               working-directory: WeatherForeCast.Test
 

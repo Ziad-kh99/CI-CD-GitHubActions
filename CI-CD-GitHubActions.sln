@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForeCastAPI", "WeatherForeCastAPI\WeatherForeCastAPI.csproj", "{490A3410-EC45-475F-AA7C-E0F4BFC4C2BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForeCast.Test", "WeatherForeCast.Test\WeatherForeCast.Test.csproj", "{FE6CBB52-B4D4-4238-A1F5-F8F0D6AFA533}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{490A3410-EC45-475F-AA7C-E0F4BFC4C2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490A3410-EC45-475F-AA7C-E0F4BFC4C2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490A3410-EC45-475F-AA7C-E0F4BFC4C2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490A3410-EC45-475F-AA7C-E0F4BFC4C2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE6CBB52-B4D4-4238-A1F5-F8F0D6AFA533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6CBB52-B4D4-4238-A1F5-F8F0D6AFA533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6CBB52-B4D4-4238-A1F5-F8F0D6AFA533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6CBB52-B4D4-4238-A1F5-F8F0D6AFA533}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
